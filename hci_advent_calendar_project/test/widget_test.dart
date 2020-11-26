@@ -8,7 +8,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'file:///C:/Users/jacob/OneDrive/Desktop/Year%204/HCI/HCI_Advent_Calendar_Project/hci_advent_calendar_project/lib/main_backend/main.dart';
 import 'package:hci_advent_calendar_project/main_backend/mainArea.dart';
 
 void main() {

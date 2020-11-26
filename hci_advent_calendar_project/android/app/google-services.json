@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "833676513070",
+    "firebase_url": "https://hci-advent-calendar.firebaseio.com",
+    "project_id": "hci-advent-calendar",
+    "storage_bucket": "hci-advent-calendar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833676513070:android:ae9c9bcf1de423285df4bf",
+        "android_client_info": {
+          "package_name": "com.example.hci_advent_calendar_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833676513070-ode8ek0to3mikicratc1rsamvv6jlnqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM2sGcTxIiAhNUV137ixpTQidmIQtnIeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "833676513070-ode8ek0to3mikicratc1rsamvv6jlnqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
