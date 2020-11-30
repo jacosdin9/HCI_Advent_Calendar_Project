@@ -21,6 +21,8 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
   void initState() {
     super.initState();
     getFamilyPoints();
+    setState(() {});
+    print(familyPoints);
     a = leaderBoardCell("Johnston", familyPoints);
     b = leaderBoardCell("Osdin", 78);
     list = [a,b];
@@ -45,13 +47,13 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
   }
 }
 
-Future<List> getFamilyPoints() async {
-  CollectionReference dr = FirebaseFirestore.instance.collection("universalData");
-  return dr.get().then((querySnapshot) {
-    querySnapshot.docs.forEach((value) {
-      print(fbUser.uid + ": " + value.get("totalPoints"));
-    });
-  }).catchError((onError){
-    print("ERROR");
-  });
-}
+// Future<List> getFamilyPoints() async {
+//   CollectionReference dr = FirebaseFirestore.instance.collection("universalData");
+//   return dr.get().then((querySnapshot) {
+//     querySnapshot.docs.forEach((value) {
+//       print(fbUser.uid + ": " + value.get("totalPoints"));
+//     });
+//   }).catchError((onError){
+//     print("ERROR");
+//   });
+// }
