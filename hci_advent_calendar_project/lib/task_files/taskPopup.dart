@@ -86,8 +86,7 @@ class TaskPopup extends StatelessWidget{
                   FirebaseMain().addPointsToTotal(FirebaseFirestore.instance.collection(fbUser.uid).doc("familyData"), points);
                   FirebaseMain().updateUniversalData(points);
                   getFamilyPoints();
-                  // Navigator.pop(context);
-                  main();
+                  Navigator.pop(context);
                 },
                 child: Text(
                   "Done",
