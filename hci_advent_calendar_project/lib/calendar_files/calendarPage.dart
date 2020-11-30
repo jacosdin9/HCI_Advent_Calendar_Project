@@ -27,21 +27,25 @@ class _CalendarPageState extends State<CalendarPage>{
 
     //test events
     _events = {
-      DateTime.now().add(Duration(days: 1)): [
-        'Event A0',
-        'Event B0',
-        'Event C0'
+      DateTime.now().add(Duration(days: -1)): [
+        'press ups - Dad',
+        'paint a picture - Scott'
       ],
-      DateTime.now().add(Duration(days: 2)): [
-        'Event A1',
-        'Event A2'
+      DateTime.now().add(Duration(days: -2)): [
+        'lunges - Emma',
+        'make soup - Mum'
+        'tidy bedroom - Cammy'
       ],
-      DateTime.now().add(Duration(days: 3)): [
-        'Event A2',
-        'Event B2',
-        'Event C2',
-        'Event D2'
+      DateTime.now().add(Duration(days: -3)): [
+        'do 10 kick ups - Scott',
+        'relax by having a bath - Mum',
+        'zumba class on youtube - Emma',
+        'mop kitchen - Dad'
       ],
+
+      DateTime.now().add(Duration(days: 10)):[
+        'ISOLATION IS OVER!',
+      ]
     };
   }
 
@@ -118,7 +122,8 @@ class _CalendarPageState extends State<CalendarPage>{
                   sliver: SliverList(
                     delegate: SliverChildBuilderDelegate(
                           (context, index) =>
-                      Text(_selectedEvents.toString()),
+                      Text(_selectedEvents[index].toString()),
+
                       childCount: _selectedEvents.length,
                     ),
                   ),

@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hci_advent_calendar_project/firebase_files/firebaseMain.dart';
+import 'package:hci_advent_calendar_project/main_backend/main.dart';
 import 'package:hci_advent_calendar_project/main_backend/mainArea.dart';
 import 'package:hci_advent_calendar_project/task_files/taskPage.dart';
 
@@ -85,7 +86,8 @@ class TaskPopup extends StatelessWidget{
                   FirebaseMain().addPointsToTotal(FirebaseFirestore.instance.collection(fbUser.uid).doc("familyData"), points);
                   FirebaseMain().updateUniversalData(points);
                   getFamilyPoints();
-                  Navigator.pop(context);
+                  // Navigator.pop(context);
+                  main();
                 },
                 child: Text(
                   "Done",
