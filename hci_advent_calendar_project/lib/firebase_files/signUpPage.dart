@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:hci_advent_calendar_project/firebase_files/firebaseAuthentication.dart';
 import 'package:provider/provider.dart';
 
+import 'firebaseMain.dart';
+
 class SignUpPage extends StatelessWidget {
 
   final TextEditingController emailController = TextEditingController();
@@ -80,6 +82,7 @@ class SignUpPage extends StatelessWidget {
                   ),
                   padding: EdgeInsets.fromLTRB(30, 30, 30, 30),
                   onPressed: () async {
+                    FirebaseMain().addToUniversalData();
                     await context.read<FirebaseAuthentication>().signUp(
                       email: emailController.text.trim(),
                       password: passwordController.text.trim(),
