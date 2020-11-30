@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,22 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
   }
 
 
+<<<<<<< HEAD
+=======
+class LeaderboardPage extends StatefulWidget{
+  @override
+  _LeaderboardPageState createState() => _LeaderboardPageState();
+}
+
+class _LeaderboardPageState extends State<LeaderboardPage> {
+  List familyScores;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+>>>>>>> 81b5e3b97f74a6179456fc27edabed58df61efe5
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -43,4 +60,15 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
       ],
     );
   }
+}
+
+Future<List> getFamilyPoints() async {
+  CollectionReference dr = FirebaseFirestore.instance.collection("universalData");
+  return dr.get().then((querySnapshot) {
+    querySnapshot.docs.forEach((value) {
+      print(fbUser.uid + ": " + value.get("totalPoints"));
+    });
+  }).catchError((onError){
+    print("ERROR");
+  });
 }
