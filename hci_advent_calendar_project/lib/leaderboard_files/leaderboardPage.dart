@@ -46,14 +46,3 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
     );
   }
 }
-
-// Future<List> getFamilyPoints() async {
-//   CollectionReference dr = FirebaseFirestore.instance.collection("universalData");
-//   return dr.get().then((querySnapshot) {
-//     querySnapshot.docs.forEach((value) {
-//       print(fbUser.uid + ": " + value.get("totalPoints"));
-//     });
-//   }).catchError((onError){
-//     print("ERROR");
-//   });
-// }
